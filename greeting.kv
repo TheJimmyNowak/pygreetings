@@ -1,0 +1,26 @@
+<CustomButton@Button>:
+    font_size: 16
+    background_color: 1, 0, 1, 1
+
+<AppBoxLayout>:
+    id: appGrid
+    spacing: 10
+    padding: 10
+    orientation: 'vertical'
+
+    TextInput:
+        id: name
+        multiline: False
+        size_hint_y: .10
+        hint_text: "Ur name"
+
+    TextInput:
+        id: greetings
+        multiline: True
+        size_hint_y: .70
+        hint_text: "Greetings"
+
+    CustomButton:
+        text: "Send Greetings"
+        on_press: appGrid.send_greetings(name.text, greetings.text)
+        size_hint_y: .20
