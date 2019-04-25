@@ -8,7 +8,8 @@ kivy.require('1.10.1')
 
 
 class AppBoxLayout(BoxLayout):
-    def send_greetings(self, name, greeting):
+    @staticmethod
+    def send_greetings(name, greeting):
         db.send_greetings(name, greeting)
 
 

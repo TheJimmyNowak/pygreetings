@@ -2,3 +2,6 @@
 .idea/
 __pycache__
 settings.json
+main.spec
+build/
+dist/
