@@ -1,12 +1,11 @@
 # Use the latest 2.1 version of CircleCI pipeline processing engine, see https://circleci.com/docs/2.0/configuration-reference/
 version: 2.1
 
-docker:
-  - image: continuumio/miniconda3
-  - image: circleci/python:3.6.8
 jobs:
   build:
-    # ...
+    docker:
+      - image: continuumio/miniconda3
+      - image: circleci/python:3.6.8
     steps:
       - checkout  # checkout source code to working directory
       - run:
