@@ -16,6 +16,7 @@ before_install:
   # Edit the environment.yml file for the target Python version
   - sed -i -E 's/(python=)(.*)/\1'$TRAVIS_PYTHON_VERSION'/' ./environment.yml
   - conda env create -n testenv -f environment.yml
+  - conda install -c anaconda dnspython
   - source activate testenv
 
 script:
