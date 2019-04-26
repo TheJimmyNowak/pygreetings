@@ -15,8 +15,6 @@ before_install:
 - conda env create -n testenv -f environment.yml
 - conda install -c anaconda dnspython
 - source activate testenv
+- conda list
 script:
 - pytest --rootdir=tests/ -v
-env:
-  global:
-    secure: e6aoxSkg5DecYvjDiMO67lupH882xVb0cWacyK35GO/jLsFE6NlQyIKAaZj87URZg5dF6ZUlXyLlvd0SNaptw7huILwqX03AwGWa45Zr31l2ZC4gKxH8J5rv3+w6gqD2hvABnri60s7BdrmrtzvY7jz7MFI8seD4DIy/1WDVFiuB1ABCZujSyFiQS8FwOe1EVP4T15Y7kHtVKe6NJyCtLi1zTDm8iSONcETzyQzQC2h6CxoLmBJmxVuLfM/5On/ESKatHjY9dRUy51KgYEzMzVubClnQAjG3bqbv7MdPhBixHjsyB8uWeJKJUZ5QkpFGy8VS0SpFoY1tdvXclbZ2hrY//UFaK1vOs9F6Pn+7CfzwQJm0sSjN4cymebpR0LlJjnEuc4FV/bIyaJtnUNP3hj0KxY4jyUulIkbV5hNDbpVe+F1AAu9D0Y4arz3fyY1Xp3V2LBkBUiMsv+Tv9KB+4pDMYpV42+BFqFcQsAawITniWzEnEdDhEbXEsD96yvIyfxhYBAIdrv1L2LdJpfnJkGJnkgeBNrxsNWYPK+JWh8J5Bm0mxIYWZ1jOprYfE8K/b3U7R7JxVQTUELvEEyp8FERSGnMFeXRpj0+IKMqSZPg0Tq4Hb2RMUHRE/D85XmTerQjytJL5+3wTjolxX/dDwk4aqVHutVQRUgEgK8BRUpk=
