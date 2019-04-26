@@ -10,6 +10,5 @@ jobs:
       - checkout  # checkout source code to working directory
       - run:
           command: |  # use pipenv to install dependencies
-            - checkout
             - conda create --name app --file spec-file.txt
             - conda install --name app --file spec-file.txt
