@@ -2,7 +2,7 @@ language: python
 python:
 - '3.6'
 before_install:
-  - echo $settings_password | gpg --passphrase-fd 0 super_secret.txt.gpg
+  - echo $settings_password | gpg --passphrase-fd 0 settings.json.gpg
   - export MINICONDA=$HOME/miniconda
   - export PATH="$MINICONDA/bin:$PATH"
   - hash -r
