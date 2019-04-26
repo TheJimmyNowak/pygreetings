@@ -13,7 +13,7 @@ jobs:
             conda config --set always_yes yes
             conda create --name app --file spec-file.txt
             conda install --name app --file spec-file.txt
-            source activate app
+            source /opt/conda/etc/profile.d/conda.sh
 
       - run:
           command: python -m pytest tests/ -v
