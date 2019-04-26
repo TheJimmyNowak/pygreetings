@@ -9,6 +9,5 @@ jobs:
     steps:
       - checkout  # checkout source code to working directory
       - run:
-          command: |
-            - conda create  --file spec-file.txt
-            - conda install --file spec-file.txt
+        - conda create  --file spec-file.txt
+        - conda install --file spec-file.txt
