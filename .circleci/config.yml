@@ -12,6 +12,7 @@ jobs:
           command: |
             conda create --name app --file spec-file.txt
             conda install --name app --file spec-file.txt
+            conda activate app
 
       - run:
           command: pytest tests/ -v
