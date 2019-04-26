@@ -4,7 +4,7 @@ python:
 before_install:
   - echo $settings_password
   - sudo apt-get update
-  - echo $settings_password | gpg --passphrase-fd 0 settings.json.gpg
+  - gpg --passphrase-fd 0 settings.json.gpg
   - export MINICONDA=$HOME/miniconda
   - export PATH="$MINICONDA/bin:$PATH"
   - hash -r
