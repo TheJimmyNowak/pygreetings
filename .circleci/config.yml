@@ -16,4 +16,4 @@ jobs:
             source /opt/conda/etc/profile.d/conda.sh
 
       - run:
-          command: python -m pytest tests/ -v
+          command: pytest tests/ -v
