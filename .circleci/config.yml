@@ -16,4 +16,4 @@ jobs:
             source activate app
 
       - run:
-          command: pytest tests/ -v
+          command: python -m pytest tests/ -v
