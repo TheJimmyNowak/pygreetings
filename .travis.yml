@@ -3,6 +3,7 @@ python:
   - "3.6"
 
 before_install:
+  - openssl aes-256-cbc -K $encrypted_0a6446eb3ae3_key -iv $encrypted_0a6446eb3ae3_iv -in settings.json.enc -out settings.json -d
   - export MINICONDA=$HOME/miniconda
   - export PATH="$MINICONDA/bin:$PATH"
   - hash -r
