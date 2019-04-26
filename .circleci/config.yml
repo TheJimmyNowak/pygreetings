@@ -14,4 +14,4 @@ jobs:
             conda create --name app --file spec-file.txt
             conda install --name app --file spec-file.txt
             source /opt/conda/etc/profile.d/conda.sh
-            pytest tests/ -v
+            py.test tests/ -v
