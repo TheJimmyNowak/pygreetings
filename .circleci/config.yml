@@ -13,7 +13,6 @@ jobs:
             conda config --set always_yes yes
             conda create --name app --file spec-file.txt
             conda install --name app --file spec-file.txt
-            bash miniconda.sh -b -p /home/ubuntu/miniconda3
             source activate app
 
       - run:
