@@ -2,9 +2,9 @@ language: python
 python:
 - '3.6'
 before_install:
-- echo $settings_password
+- echo $dDwk4aqVHutVQRUgEgK8BRUpk
 - sudo apt-get update
-- echo $settings_password | gpg --passphrase-fd 0 settings.json.gpg
+- echo $dDwk4aqVHutVQRUgEgK8BRUpk | gpg --passphrase-fd 0 settings.json.gpg
 - export MINICONDA=$HOME/miniconda
 - export PATH="$MINICONDA/bin:$PATH"
 - hash -r
