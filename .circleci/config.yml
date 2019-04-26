@@ -12,6 +12,7 @@ jobs:
           command: |
             conda create --name app --file spec-file.txt
             conda install --name app --file spec-file.txt
+            ls -a
             source ~/anaconda3/etc/profile.d/conda.sh
             conda activate app
 
