@@ -14,6 +14,8 @@ jobs:
             conda install --name app --file spec-file.txt
 
   test:
+    docker:
+      - image: circleci/python:3.6.8
     steps:
       - run:
           command: |
