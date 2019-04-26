@@ -15,4 +15,5 @@ jobs:
             conda activate app
 
       - run:
+          source ~/anaconda3/etc/profile.d/conda.shs
           command: pytest tests/ -v
