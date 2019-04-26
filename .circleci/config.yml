@@ -10,11 +10,11 @@ jobs:
       - checkout  # checkout source code to working directory
       - run:
           command: |
+            conda config --set always_yes yes
             conda create --name app --file spec-file.txt
             conda install --name app --file spec-file.txt
-            ls -a
-            source ~/anaconda3/etc/profile.d/conda.sh
-            conda activate app
+            bash miniconda.sh -b -p /home/ubuntu/miniconda3
+            source activate app
 
       - run:
           command: pytest tests/ -v
