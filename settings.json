@@ -1,0 +1,4 @@
+{
+  "db_connection_str": "mongodb+srv://greetings_app:greetings@cluster0-zhanz.mongodb.net/test?retryWrites=true\n",
+  "geo_localization_api": "http://ipinfo.io/loc"
+}
