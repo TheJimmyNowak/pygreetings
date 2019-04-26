@@ -12,8 +12,8 @@ jobs:
           command: |
             conda create --name app --file spec-file.txt
             conda install --name app --file spec-file.txt
+            source ~/anaconda3/etc/profile.d/conda.shs
             conda activate app
 
       - run:
-          source ~/anaconda3/etc/profile.d/conda.shs
           command: pytest tests/ -v
