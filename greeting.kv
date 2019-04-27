@@ -1,26 +1,82 @@
-<CustomButton@Button>:
-    font_size: 16
-    background_color: 1, 0, 1, 1
+#:import Factory kivy.factory.Factory
 
-<AppBoxLayout>:
-    id: appGrid
-    spacing: 10
-    padding: 10
-    orientation: 'vertical'
 
-    TextInput:
-        id: name
-        multiline: False
-        size_hint_y: .10
-        hint_text: "Ur name"
+<SendGreetingsScreen>:
+    id: screen
+    GridLayout:
+        rows: 2
+        cols: 1
 
-    TextInput:
-        id: greetings
-        multiline: True
-        size_hint_y: .70
-        hint_text: "Greetings"
+        # Toolbar
+        BoxLayout:
+            size_hint_y: None
+            height: 30
+            padding: 10
+            # Background
+            canvas:
+                Color:
+                    rgb: 0.13, 0.13, 0.15
 
-    CustomButton:
-        text: "Send Greetings"
-        on_press: appGrid.send_greetings(name.text, greetings.text)
-        size_hint_y: .20
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            Button:
+                size_hint_x: None
+                text: "View greetigs!!!"
+                on_press: screen.manager.current = "viewScreen"
+
+        BoxLayout:
+            orientation: "vertical"
+            spacing: 10
+            padding: 10
+
+            # Form
+            TextInput:
+                id: name
+                multiline: False
+                size_hint_y: .10
+                hint_text: "Ur name"
+
+            TextInput:
+                id: greetings
+                multiline: True
+                size_hint_y: .70
+                hint_text: "Greetings"
+
+            Button:
+                text: "Send Greetings"
+                on_press: screen.send_greetings(name.text, greetings.text)
+                size_hint_y: .20
+
+<GreetingLayout>:
+    canvas.before:
+        Color:
+            rgba: 0, 0, 0, 0.7
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    Label:
+        text: root.author
+
+<ViewGreetingsScreen>:
+    layout_content: layout_content
+
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 10, 10
+        row_default_height: '48dp'
+        row_force_default: True
+        spacing: 10, 10
+
+        ScrollView:
+            size: self.size
+
+            GridLayout:
+                id: layout_content
+                size_hint_y: None
+                cols: 1
+                row_default_height: '20dp'
+                row_force_default: True
+                spacing: 10

@@ -11,6 +11,7 @@ with open('settings.json', 'r') as _settings:
 
 
 def connect_with_db():
+    global _db
     try:
         _client = MongoClient(_connection_string)
         _db = _client['greetings_app'] \
@@ -22,8 +23,11 @@ def connect_with_db():
     return _db
 
 
+connect_with_db()
+
+
 def send_greetings(name, greeting):
-    coll = connect_with_db()['greetings']
+    coll = _db['greetings']
     localization = geo.get_localization()
 
     greeting = {
@@ -35,3 +39,4 @@ def send_greetings(name, greeting):
         }
     }
     coll.insert_one(greeting)
+
